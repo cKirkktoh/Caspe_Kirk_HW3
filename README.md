@@ -12,7 +12,6 @@ Welcome to the Songs App! This project is a simple web application built with Vu
 
 - Vue.js
 - Lumen (PHP)
-- Axios (for HTTP requests)
 - HTML5
 - CSS3
 - JavaScript
