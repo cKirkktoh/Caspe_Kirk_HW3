@@ -6,7 +6,6 @@ new Vue({
         songs: [],
         selectedSong: null,
         loading: true
-        
     },
     computed: {
         sortedSongs() {
@@ -51,5 +50,3 @@ new Vue({
         }
     }
 });
-
-mount('#app');
