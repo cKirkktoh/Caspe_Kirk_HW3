@@ -10,9 +10,15 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Welcome to the Songs App</h1>
+        <p>Discover your favorite songs and explore their details!</p>
+    </header>
+
     <main>
         <div id="app">
             <h2>Song List</h2>
+            <p>Discover the best of the best songs of this decade.</p>
             <div v-if="loading" class="loader"></div>
             <div v-else>
                 <ul>
@@ -32,6 +38,10 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2022 Songs App. All rights reserved.</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
