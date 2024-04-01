@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Movies API</title>
+    <title>Songs App</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">    <link href="css/grid.css" rel="stylesheet">
@@ -14,4 +14,25 @@
     <!-- <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
     <script defer type="module" src="js/main.js"></script>
 </head>
+<body>
+    <div id="app">
+        <h1>Songs</h1>
+        <div v-if="loading" class="loader"></div>
+        <div v-else>
+            <ul>
+                <li v-for="song in songs" :key="song.id" @click="selectSong(song)">
+                    {{ song.title }} - {{ song.artist }}
+                </li>
+            </ul>
+            <div v-if="selectedSong">
+                <h2>{{ selectedSong.title }}</h2>
+                <p>{{ selectedSong.artist }} - {{ selectedSong.album }}</p>
+                <p>Duration: {{ selectedSong.duration }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
 </html>
